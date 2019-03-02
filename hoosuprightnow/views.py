@@ -13,7 +13,8 @@ from django.contrib.auth.models import User
 # Create your views here.
 def index(request):
     context = {
-    }
+        'user': request.user
+        }
     return render(request, "hoosuprightnow/index.html", context)
 
 class SignUp(generic.CreateView):
@@ -29,5 +30,23 @@ class SignUp(generic.CreateView):
     success_url = reverse_lazy('login')
     template_name = 'hoosuprightnow/signup.html'
 
-
+def interests(request):
+    activity = ''
    
+    # get activity if user is authenticated
+    if request.user.is_authenticated:
+        activity = request.user.profile.activity
+    
+    context = {
+        'user': request.user,
+        'activity': activity
+    }
+
+    return render(request, "hoosuprightnow/interests.html", context)
+
+def update_activity(request):
+    if request.user.is_authenticated:
+        request.user.profile.activity = request.POST['activity']
+        request.user.save()
+    
+    return redirect('/interests')
