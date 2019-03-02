@@ -1,55 +1,51 @@
 ﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
-
-
-<body>
-
-	<nav class="navbar navbar-expand-md" style="background-color: gray;">
-
-
-  <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
-    aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
-        class="fas fa-bars fa-1x"></i></span></button>
-
-    <!-- Links -->
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" style="color:black"; href="/messages/">Messages</a>
-      </li>
-  </ul>
-</div>
-	
-	<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent1">
-	<ul class="navbar-nav ml-auto">
-      <li class="nav-brand">
-        <a class="nav-link" style="font-size:36px;font-family:Arial Black;color:black"; href="" > Hoos Up</a>
-      </li>
-  </ul>
- </div>
-
-    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent1">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-      	<a class="nav-link" style="color:black"; href="{% url 'hoosuprightnow:signup' %}">Sign Up</a>
-      </li>
-    </ul>
-    <!-- Links -->
-
-  </div>
-  <!-- Collapsible content -->
-
-</nav>
-
-</body>
-
-
 <head>
     <meta charset="utf-8" />
-    <title style="font align": center">Hoos Up</title>
+    <title>Hoos Up</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
 </head>
 <body>
-    <h1 style="text-align: center;padding-top:150px">@.@</h1>
+    <div>
+        <nav class="navbar navbar-expand-md" style="background-color: gray;">
+            <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+                    aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="dark-blue-text">
+                    <i class="fas fa-bars fa-1x"></i>
+                </span>
+            </button>
+
+            <!-- Links -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" style="color:black" ; href="/messages/">Messages</a>
+                </li>
+            </ul>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent1">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-brand">
+                        <a class="nav-link" style="font-size:36px;font-family:Arial Black;color:black" ; href=""> Hoos Up</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent1">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" style="color:black" ; href="{% url 'login' %}">Log in</a>
+                    </li>
+                </ul>
+                <!-- Links -->
+
+            </div>
+            <!-- Collapsible content -->
+       
+        </nav>
+    </div>
+    <div>
+        <h1 style="text-align: center;padding-top:150px">@.@</h1>
+    </div>
 </body>
 </html>
