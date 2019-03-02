@@ -13,7 +13,7 @@
 </head>
 <body class="container-fluid bg-light">
     <div class="row">
-        <a class="mx-auto text-dark text-center" style="text-decoration: none;" href=""><h1>Hoos Up</h1></a>
+        <a class="mx-auto text-dark text-center" style="text-decoration: none;" href="{% url 'hoosuprightnow:index' %}"><h1>Hoos Up</h1></a>
     </div>
     <div class="row">
         <div class="col-lg-4 col-md-5 col-sm-8 col-10 border rounded mx-auto mt-2 bg-white">
@@ -35,7 +35,7 @@
                 <button type="submit" class="btn btn-block btn-success">Log in</button>
                 <hr />
                 <p class="text-secondary">New to Hoos Up?</p>
-                <button class="btn btn-block btn-secondary mb-3" type="button" onclick="">Sign up</button>
+                <button class="btn btn-block btn-secondary mb-3" type="button" onclick="location.href='{% url 'hoosuprightnow:signup' %}'">Sign up</button>
             </form>
         </div>
     </div>
