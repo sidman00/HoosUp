@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'hoosuprightnow',
-    'widget_tweaks'
+    'widget_tweaks',
+    'postman',
 ]
 
 MIDDLEWARE = [
@@ -52,11 +53,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'HoosUp.urls'
+POSTMAN_I18N_URLS = True
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['hoosuprightnow/templates/messaging','hoosuprightnow/templates/registration','hoosuprightnow/templates/hoosuprightnow'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -115,7 +117,8 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+POSTMAN_AUTO_MODERATE_AS = True  # default is None
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 

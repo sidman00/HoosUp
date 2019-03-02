@@ -32,4 +32,5 @@ urlpatterns = [
     path('', include('hoosuprightnow.urls')),
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
+    url(r'^messages/', include('postman.urls')),
 ]
