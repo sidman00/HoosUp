@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\hoosuprightnow\\Templates",
+    "\\hoosuprightnow\\Templates\\hoosuprightnow",
+    "\\hoosuprightnow\\Templates\\registration"
   ],
+  "SelectedNode": "\\manage.py",
   "PreviewInSolutionExplorer": false
 }
