@@ -10,7 +10,7 @@ import ast
 @deconstructible
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, default=None)
-    interests = models.CharField(max_length=500)
+    activity = models.CharField(max_length=100, default='')
 
     def __str__(self):
         return self.user.username

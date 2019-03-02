@@ -12,5 +12,12 @@ urlpatterns = [
 
     # /signup
     path('signup/' , views.SignUp.as_view(), name = 'signup'),
+
+    # /interests
+    path('interests/' , views.interests, name = 'interests'),
+
+    # /interests
+    path('update_activity/' , views.update_activity, name = 'update_activity'),
 ]
+
 
