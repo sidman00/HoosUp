@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'hoosuprightnow',
-    'widget_tweaks'
+    'widget_tweaks',
+    'postman',
 ]
 
 MIDDLEWARE = [
