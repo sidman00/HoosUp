@@ -21,9 +21,9 @@
         </div>
         <div class="row mt-2">
             {% if user.is_authenticated %}
-                <button type="button" class="btn btn-outline-light" onclick="location.href='{% url 'hoosuprightnow:hoos_online' %}'">Find Some Bitches</button>
+                <button type="button" class="btn btn-outline-light" onclick="location.href='{% url 'hoosuprightnow:hoos_online' %}'">Find Some Hoos</button>
             {% else %}
-                <button type="button" class="btn btn-outline-light" onclick="location.href='{% url 'login' %}'">Find Some Bitches</button>
+                <button type="button" class="btn btn-outline-light" onclick="location.href='{% url 'login' %}'">Find Some Hoos</button>
             {% endif %}
         </div>
     </div>
