@@ -9,6 +9,7 @@ from django.urls import reverse_lazy
 from django.views import generic
 from django import forms
 from django.contrib.auth.models import User
+from HoosUp.middleware import get_online_now
 
 # Create your views here.
 def index(request):
@@ -30,23 +31,19 @@ class SignUp(generic.CreateView):
     success_url = reverse_lazy('login')
     template_name = 'hoosuprightnow/signup.html'
 
-def interests(request):
-    activity = ''
-   
-    # get activity if user is authenticated
-    if request.user.is_authenticated:
-        activity = request.user.profile.activity
-    
-    context = {
-        'user': request.user,
-        'activity': activity
-    }
-
-    return render(request, "hoosuprightnow/interests.html", context)
-
 def update_activity(request):
     if request.user.is_authenticated:
         request.user.profile.activity = request.POST['activity']
         request.user.save()
     
-    return redirect('/interests')
+    return redirect('/hoos_online')
+
+def hoos_online(request):
+    online_users = request.online_now
+    
+    context = {
+        'user': request.user,
+        'online_users': online_users
+    }
+
+    return render(request, "hoosuprightnow/hoos_online.html", context)

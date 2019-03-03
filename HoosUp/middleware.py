@@ -22,11 +22,14 @@ class OnlineNowMiddleware(MiddlewareMixin):
     def process_request(self, request):
         # First get the index
         uids = cache.get('online-now', [])
-
+        online_now_ids=[]
         # Perform the multiget on the individual online uid keys
         online_keys = ['online-%s' % (u,) for u in uids]
         fresh = cache.get_many(online_keys).keys()
-        online_now_ids = [int(k.replace('online-', '')) for k in fresh]
+        try:
+            online_now_ids = [int(k.replace('online-', '')) for k in fresh]
+        except ValueError:
+            print()
 
         # If the user is authenticated, add their id to the list
         if request.user:

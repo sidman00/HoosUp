@@ -14,10 +14,10 @@ urlpatterns = [
     path('signup/' , views.SignUp.as_view(), name = 'signup'),
 
     # /interests
-    path('interests/' , views.interests, name = 'interests'),
+    path('update_activity/' , views.update_activity, name = 'update_activity'),
 
     # /interests
-    path('update_activity/' , views.update_activity, name = 'update_activity'),
+    path('hoos_online/' , views.hoos_online, name = 'hoos_online'),
 ]
 
 

@@ -1,0 +1,9 @@
+﻿body, html, #container {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("rotunda.jpg");
+    background-size: 1600px;
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+}
