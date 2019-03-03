@@ -39,6 +39,9 @@ def update_activity(request):
     return redirect('/hoos_online')
 
 def hoos_online(request):
+    if not request.user.is_authenticated:
+        return redirect('/')
+
     online_users = request.online_now
     
     context = {

@@ -6,13 +6,23 @@
     <h1 class="title">Online</h1>
     <p class="lead">Hoos online right now?</p>
     <div class="list-group pb-3">
-        {% for user in online_users %}
-        <a href="#" class="list-group-item list-group-item-action">
-            <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">{{ user }}</h5>
-            </div>
-            <p class="mb-1">{{ user.profile.activity }}</p>
-        </a>
+        {% for persons in online_users %}
+            {% if persons == user %}
+                <a href="/messages/write/" class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">{{ persons }}</h5>
+                        <span class="badge badge-primary badge-pill" style="padding-top: 6px;">You</span>
+                    </div>
+                    <p class="mb-1">{{ persons.profile.activity }}</p>
+                </a>   
+            {% else %}
+                <a href="/messages/write/" class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">{{ persons }}</h5>
+                    </div>
+                    <p class="mb-1">{{ persons.profile.activity }}</p>
+                </a>
+            {% endif %}
         {% endfor %}
     </div>
 {% endblock %}
